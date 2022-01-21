@@ -1,0 +1,69 @@
+*{
+    margin: 0;  
+    padding: 2px; 
+    font-size: 100%; 
+    border: none; 
+    outline: none; 
+    font-weight: 300; 
+    box-sizing: border-box; 
+    font-family: 'Cairo', sans-serif;
+    
+}
+body{
+    background-image: url(fundo.jpg);
+    background-position: 50% 10%;
+    color:black;
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 18pt;
+    text-align: center;
+}
+h2 {
+    color: #ffffff;
+    font-size: 12pt;
+    text-align: center;
+    font-style: italic;
+}
+h3 {
+    color: #ffffff;
+    font-size: 9pt;
+    text-align: center;
+}
+h4 {
+    color: #ffffff;
+    font-size: 9pt;
+    text-align: center;
+}
+p {
+    color: #ff0000;
+    font-size: 6pt;
+    text-align: center;
+}
+input {
+    width: 50%;
+    text-align: center;
+    left: 30%;
+    position: relative;
+}
+td {
+    width: 150px;
+}
+div {
+    color: white;
+    width: max-content;
+}
+img {
+    width: 135px;
+    height: 120px;
+    float: right;
+    margin-top: -45px;
+}
+button {
+    background: linear-gradient(to right, #ff0000, #ac0d0d);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
