@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ff0000">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Doces</title>
+    <title>Cidinha Doces</title>
 </head>
 <body>
     <h1>Orçamento - Cidinha Doces</h1>
@@ -20,31 +19,31 @@
             <td><h2>Valor</h2></td> 
         </tr>
         <tr>
-            <td><p>R$ 0,50</p></td>
+            <td><p>R$0,50</p></td>
             <td><h3>Brigadeiro</h3></td>  
             <td><input type="number"  id="txt1"></td>
             <td><div id="res1"></div></td>
         </tr>
         <tr>
-            <td><p>R$ 0,50</p></td>
+            <td><p>R$0,50</p></td>
             <td><h3>Beijinho</h3></td>  
             <td><input type="number" id="txt2"></td>
             <td><div id="res2"></div></td>
         </tr>
         <tr>
-            <td><p>R$ 0,50</p></td>
+            <td><p>R$0,50</p></td>
             <td><h3>Cajuzinho</h3></td>  
             <td><input type="number"  id="txt3"></td>
             <td><div id="res3"></div></td>
         </tr>
         <tr>
-            <td><p>R$ 0,50</p></td>
+            <td><p>R$0,50</p></td>
             <td><h3>Bem casado</h3></td>  
             <td><input type="number" id="txt4"></td>
             <td><div id="res4"></div></td>
         </tr>
         <tr>
-            <td><p>R$ 0,50</p></td>
+            <td><p>R$0,50</p></td>
             <td><h3>Bicho de pé</h3></td>  
             <td><input type="number" id="txt5"></td>
             <td><div id="res5"></div></td>
@@ -52,50 +51,50 @@
         <tr>
             <td><p>R$ 0,90</p></td>
             <td><h3>Surpresa de Uva</h3></td>  
-            <td><input type="number" id="txt7"></td>
-            <td><div id="res7"></div></td>
+            <td><input type="number" id="txt6"></td>
+            <td><div id="res6"></div></td>
         </tr>
         <tr>
             <td><p>R$ 1,50</p></td>
             <td><h3>Trufa tam. 1</h3></td>  
-            <td><input type="number" id="txt8"></td>
-            <td><div id="res8"></div></td>
+            <td><input type="number" id="txt7"></td>
+            <td><div id="res7"></div></td>
         </tr>
         <tr>
             <td><p>R$ 2,80</p></td>
             <td><h3>Trufa tam. 2</h3></td>  
+            <td><input type="number" id="txt8"></td>
+            <td><div id="res8"></div></td>
+        </tr>
+        <tr>
+            <td><p>R$ 1,50</p></td>
+            <td><h3>Trufa flor</h3></td>  
             <td><input type="number" id="txt9"></td>
             <td><div id="res9"></div></td>
         </tr>
         <tr>
             <td><p>R$ 1,50</p></td>
-            <td><h3>Trufa flor</h3></td>  
+            <td><h3>Trufa coração</h3></td>  
             <td><input type="number" id="txt10"></td>
             <td><div id="res10"></div></td>
         </tr>
         <tr>
             <td><p>R$ 1,50</p></td>
-            <td><h3>Trufa coração</h3></td>  
+            <td><h3>Brig. de Colher</h3></td>  
             <td><input type="number" id="txt11"></td>
             <td><div id="res11"></div></td>
         </tr>
         <tr>
             <td><p>R$ 1,50</p></td>
-            <td><h3>Brig. de Colher</h3></td>  
-            <td><input type="number" id="txt13"></td>
-            <td><div id="res13"></div></td>
-        </tr>
-        <tr>
-            <td><p>R$ 1,50</p></td>
             <td><h3>Copinho de chocolate</h3></td>  
-            <td><input type="number" id="txt14"></td>
-            <td><div id="res14"></div></td>
+            <td><input type="number" id="txt12"></td>
+            <td><div id="res12"></div></td>
         </tr>
         <tr>
             <td><p>R$ 2,00</p></td>
             <td><h3>Bolinho de chocolate</h3></td>  
-            <td><input type="number" id="txt16"></td>
-            <td><div id="res16"></div></td>
+            <td><input type="number" id="txt13"></td>
+            <td><div id="res13"></div></td>
         </tr>
         <tr>
             <td><h4>TOTAL A PAGAR: </h4></td>
@@ -105,8 +104,75 @@
     </table>
 
     </form>
-    <button id="calcular">Calcular</button>
-    <img src="marca.png" alt="madaDoces">
+    <button id="calcular">Calcular</button><br><br><br>
+    <img src="marca.png" alt="CidinhaDoces">
     
+    <script>
+        let calcular = document.getElementById("calcular");
+
+        calcular.addEventListener("click", function(){
+
+            
+            var p1 = parseFloat(0.50); //Brigadeiro, Beijinho, Cajuzinho, Bem Cas. Bichodepé
+            var p2 = parseFloat(0.90); //Surpresa de uva
+            var p3 = parseFloat(1.50); //Trufa 1, flor e coração, brig. colh, cop de choc
+            var p4 = parseFloat(2.00); //Bolinho de choc
+            var p5 = parseFloat(2.80); //Trufa2
+            
+            var s1 = document.getElementById("txt1").value; //
+            var s2 = document.getElementById("txt2").value;
+            var s3 = document.getElementById("txt3").value;
+            var s4 = document.getElementById("txt4").value;
+            var s5 = document.getElementById("txt5").value;
+            var s6 = document.getElementById("txt6").value;
+            var s7 = document.getElementById("txt7").value;
+            var s8 = document.getElementById("txt8").value;
+            var s9 = document.getElementById("txt9").value;
+            var s10 = document.getElementById("txt10").value;
+            var s11 = document.getElementById("txt11").value;
+            var s12 = document.getElementById("txt12").value;
+            var s13 = document.getElementById("txt13").value;
+           
+            var r1 = parseFloat((p1*s1).toFixed(2));
+            var r2 = parseFloat((p1*s2).toFixed(2));
+            var r3 = parseFloat((p1*s3).toFixed(2));
+            var r4 = parseFloat((p1*s4).toFixed(2));
+            var r5 = parseFloat((p1*s5).toFixed(2));
+            var r6 = parseFloat((p2*s6).toFixed(2));
+            var r7 = parseFloat((p3*s7).toFixed(2));
+            var r8 = parseFloat((p5*s8).toFixed(2));
+            var r9 = parseFloat((p3*s9).toFixed(2));
+            var r10 = parseFloat((p3*s10).toFixed(2));
+            var r11 = parseFloat((p3*s11).toFixed(2));
+            var r12 = parseFloat((p3*s12).toFixed(2));
+            var r13 = parseFloat((p4*s13).toFixed(2));
+            
+            
+            document.getElementById('res1').innerText = "R$ " + r1;
+            document.getElementById('res2').innerText = "R$ " + r2;
+            document.getElementById('res3').innerText = "R$ " + r3;
+            document.getElementById('res4').innerText = "R$ " + r4;
+            document.getElementById('res5').innerText = "R$ " + r5;
+            document.getElementById('res6').innerText = "R$ " + r6;
+            document.getElementById('res7').innerText = "R$ " +  r7;
+            document.getElementById('res8').innerText = "R$ " + r8;
+            document.getElementById('res9').innerText = "R$ " + r9;
+            document.getElementById('res10').innerText = "R$ " + r10;
+            document.getElementById('res11').innerText = "R$ " + r11;
+            document.getElementById('res12').innerText = "R$ " + r12;
+            document.getElementById('res13').innerText = "R$ " + r13;
+
+            var acrescimo = parseFloat(r1+r2+r3+r4+r5+r6+r7+r8+r9+r10+r11+r12+r13) * 0.05;
+            var soma = parseFloat(r1+r2+r3+r4+r5+r6+r7+r8+r9+r10+r11+r12+r13) + acrescimo;
+            var boole = soma.toFixed(2);
+            var soma2 = parseFloat(r1+r2+r3+r4+r5+r6+r7+r8+r9+r10+r11+r12+r13).toFixed(2);
+            
+            document.getElementById('total').innerText = "No cartão à vista: R$ " + boole + "\n Pix ou espécie: R$ " + soma2;
+           
+
+        });
+    
+    
+    </script>
 </body>
 </html>
